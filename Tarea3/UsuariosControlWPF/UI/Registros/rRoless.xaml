@@ -1,0 +1,41 @@
+﻿<Window x:Class="UsuariosControlWPF.UI.Registros.rRoless"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UsuariosControlWPF.UI.Registros"
+        mc:Ignorable="d"
+        Title="Registro de Roles" Height="250" Width="400">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="10">
+            <StackPanel Orientation="Vertical">
+                <Label Content="Rol Id: "/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="RolesIdTextBox" Height="26" Width="150"  HorizontalAlignment="Left" Text="{Binding RolId}"/>
+                    <Button x:Name="BuscarButton" Content="Buscar" Height="22" Width="53" HorizontalAlignment="Center" Click="BuscarButton_Click"/>
+                </StackPanel>
+
+            </StackPanel>
+
+            <Label Content="Fecha:" />
+            <StackPanel Orientation="Vertical">
+                <DatePicker x:Name="FechaDatePicker"  Height="26" Width="150" HorizontalAlignment="Left" SelectedDate="{Binding FechaCreacion}"/>
+            </StackPanel>
+
+            <Label Content="Descripcion: " />
+            <StackPanel>
+                <TextBox x:Name="DescripcionTextBox" Text="{Binding Descripcion}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,15">
+                <Button x:Name="NuevoButton" Content="Nuevo" Margin="4,0" Height="40" Width="58" Click="NuevoButton_Click" />
+
+                <Button x:Name="GuardarButton" Content="Guardar" Margin="5,0" Height="40" Width="58" Click="GuardarButton_Click"/>
+
+                <Button x:Name="EliminarButton" Margin="5,0" Content="Eliminar" Height="40" Width="58" Click="EliminarButton_Click"/>
+
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>
